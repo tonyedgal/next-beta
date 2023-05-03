@@ -13,6 +13,12 @@ const Header = () => {
       >
         Todos
       </Link>
+      <Link
+        href="/search"
+        className="px-2 py-1 bg-white text-blue-500 rounded-md"
+      >
+        Search
+      </Link>
     </div>
   );
 };
