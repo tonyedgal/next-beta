@@ -64,6 +64,7 @@ function CityPicker() {
           value={selectedCountry}
           onChange={handleSelectedCountry}
           options={options}
+          isClearable
         />
       </div>
 
@@ -89,6 +90,7 @@ function CityPicker() {
               },
               label: city.name,
             }))}
+            isClearable
           />
         </div>
       )}
