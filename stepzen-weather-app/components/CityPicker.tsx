@@ -37,9 +37,22 @@ function CityPicker() {
   const [selectedCountry, setSelectedCountry] = useState<option>(null);
   const [selectedCity, setSelectedCity] = useState<cityOption>(null);
 
+  const handleSelectedCountry = (option: option) => {
+    setSelectedCountry(option);
+    setSelectedCity(null);
+  };
+
   return (
     <div>
-      <Select options={options} />
+      <div>
+        <label htmlFor="country">Country</label>
+      </div>
+      <Select
+        className="text-black"
+        value={selectedCountry}
+        onChange={handleSelectedCountry}
+        options={options}
+      />
     </div>
   );
 }
