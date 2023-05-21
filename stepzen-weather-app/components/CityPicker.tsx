@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Country, City } from "country-state-city";
 import Select from "react-select";
+import { useRouter } from "next/navigation";
 
 type option = {
   value: {
@@ -36,6 +37,7 @@ const options = Country.getAllCountries().map((country) => ({
 function CityPicker() {
   const [selectedCountry, setSelectedCountry] = useState<option>(null);
   const [selectedCity, setSelectedCity] = useState<cityOption>(null);
+  const router = useRouter();
 
   const handleSelectedCountry = (option: option) => {
     setSelectedCountry(option);
