@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Country, City } from "country-state-city";
 import Select from "react-select";
 import { useRouter } from "next/navigation";
+import { GlobeIcon } from "@heroicons/react/solid";
 
 type option = {
   value: {
